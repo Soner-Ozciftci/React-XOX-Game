@@ -1,10 +1,11 @@
 import React ,{useState} from 'react'
 
-function Box() {
+function Box(props) {
 const [text,setText] = useState("")
 function toggleText(){
 if(text === ""){
-    setText("X")
+    setText(props.currentState)
+    props.changeTurn()
 }
 
 return(
